@@ -1,0 +1,10 @@
+{
+  "filterColor": "Farbe",
+  "selectColorRed": "[style*='rgb(255, 0, 0)']",
+  "filterValue": ".filter-value",
+  "sorter": "#sorter",
+  "productPriceID": "[id^='product-price']",
+  "prices" : ".price"
+}
+
+
