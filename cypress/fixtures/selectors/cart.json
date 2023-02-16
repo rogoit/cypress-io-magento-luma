@@ -1,0 +1,6 @@
+{
+  "buttonAddToCart": "#product-addtocart-button",
+  "miniCart": "[data-block='minicart']",
+  "buttonViewCart": "a[class='action viewcart']",
+  "itemAmountInCart": "[title='Anzahl']"
+}
