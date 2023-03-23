@@ -1,3 +1,11 @@
 {
-  "productUrl": "/olivia-1-4-zip-light-jacket.html"
+  "titleWrapper": "[data-ui-id=page-title-wrapper]",
+  "price": ".price",
+  "taxDetails": ".tax-details",
+  "inputQuantitiy": "#qty",
+  "addToCartButton": "#product-addtocart-button",
+  "addToWishlistButton": "[class='action towishlist']",
+  "addToComparisonListButton": "[class='action tocompare']",
+  "descriptionWrapper": "#description",
+  "tabMoreInformations": "#tab-label-additional-title"
 }
