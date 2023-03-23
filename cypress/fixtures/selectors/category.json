@@ -4,7 +4,10 @@
   "filterValue": ".filter-value",
   "sorter": "#sorter",
   "productPriceID": "[id^='product-price']",
-  "prices" : ".price"
+  "prices" : ".price",
+  "displayedProductsOnPageSelect" : "#limiter",
+  "displayedArticlesAmount" : "#toolbar-amount",
+  "displayedArticles" : "[class='item product product-item']",
+  "buttonListView": "[title='Liste']"
 }
-
 

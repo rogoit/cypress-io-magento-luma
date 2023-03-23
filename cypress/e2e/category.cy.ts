@@ -5,7 +5,7 @@ describe('Category page tests', () => {
   const categoryPage: CategoryPage = new CategoryPage();
 
   beforeEach(() => {
-    cy.visit('/women/tops-women/jackets-women.html');
+    cy.visit('/women/tops-women.html');
   });
 
   it('Filters for color', () => {
@@ -17,6 +17,19 @@ describe('Category page tests', () => {
   it('Sorts products from lowest to highest', () => {
     sortByPrice();
     validatePrices();
+  });
+
+  it('Changes amount of displayed products', () => {
+    cy.get(selectors.displayedProductsOnPageSelect).select('24');
+    cy.get(selectors.displayedArticlesAmount).should('contain.text', '24');
+    cy.get(selectors.displayedArticles).should('have.length', 24);
+  });
+
+  it('Can change between grind and list view', () => {
+    cy.get(selectors.displayedArticlesAmount).then((articlesAmountGridView) => {
+      cy.get(selectors.buttonListView).click();
+      cy.get(selectors.displayedArticlesAmount).invoke('text').should('not.eq', articlesAmountGridView.text());
+    });
   });
 });
 
@@ -32,8 +45,7 @@ function sortByPrice() {
 function validatePrices() {
   //push product prices into array
   const pricesArray: number[] = [];
-  cy.get(selectors.productPriceID)
-    .children(selectors.prices)
+  cy.get(selectors.productPriceID + '>' + selectors.prices)
     .each((price) => {
       const priceTrimmed = price.text().trim().replace(/,/g, '.').replace(/€/g, '');
       pricesArray.push(parseFloat(priceTrimmed));
