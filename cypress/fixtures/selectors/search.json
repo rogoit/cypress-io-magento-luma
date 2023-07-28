@@ -3,6 +3,6 @@
   "foundItems": "li[class='item product product-item']",
   "itemTitles": "a[class='product-item-link']",
   "searchSuggestion": "#qs-option-0",
-  "foundOneItemText": "Didi Sport Watch ist das einzige passende Produkt zu Ihrer Suchanfrage 'Didi'.",
-  "foundNoItemsText": "Suche ergab keine Ergebnisse"
+  "onlyOneProductFoundText": "Didi Sport Watch ist das einzige passende Produkt zu Ihrer Suchanfrage 'Didi'.",
+  "noProductFoundText": "Suche ergab keine Ergebnisse"
 }

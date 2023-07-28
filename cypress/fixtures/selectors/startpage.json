@@ -1,0 +1,12 @@
+{
+  "productItems": ".product-item",
+  "welcomeMessage": "[class='greet welcome']",
+  "loginButton": "Anmelden",
+  "registerButton": "Ein Konto erstellen",
+  "newsletterRegistration": "#newsletter",
+  "newsletterConfirmSuccess": "[data-ui-id='message-success']",
+  "newsletterConfirmFail": "[data-ui-id='message-error']",
+  "newsletterError": "#newsletter-error",
+  "search": "#minisearch-form-top-search",
+  "mainContent": "#maincontent"
+}

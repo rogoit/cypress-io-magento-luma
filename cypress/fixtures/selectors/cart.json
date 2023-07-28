@@ -1,0 +1,13 @@
+{
+  "buttonAddToCart": "#product-addtocart-button",
+  "miniCart": "[data-block='minicart']",
+  "buttonViewCart": "a[class='action viewcart']",
+  "itemAmountInCart": "[title='Anzahl']",
+  "notificationMessageTop": "[data-bind='html: $parent.prepareMessageForHtml(message.text)']",
+  "inputAmountInCard": "input[title='Anzahl']",
+  "removeArticle": "[title='Artikel entfernen']",
+  "cartEmptyTextField": "[class='cart-empty']",
+  "activateCouponField": "#block-discount-heading",
+  "couponCodeField": "#coupon_code",
+  "buttonCheckout": "[data-role='proceed-to-checkout']"
+}
