@@ -11,8 +11,8 @@ describe('Startpage tests', () => {
 
   it('Startpage valid and contains products', () => {
     cy.get(selectors.welcomeMessage).should('be.visible');
-    cy.contains(selectors.loginButton).should('be.visible');
-    cy.contains(selectors.registerButton).should('be.visible');
+    cy.contains(selectors.loginButton, { matchCase: false }).should('be.visible');
+    cy.contains(selectors.registerButton, { matchCase: false }).should('be.visible');
     cy.get('footer').should('be.visible');
     cy.get(selectors.search).should('be.visible');
     cy.get(selectors.mainContent).should('be.visible').should('not.be.empty');

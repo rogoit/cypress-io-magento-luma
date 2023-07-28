@@ -39,7 +39,7 @@ function setFilterColor() {
     .contains('Farbe')
     .then((filterColorCollapsibleColor) => {
       if (filterColorCollapsibleColor.attr('aria-expanded') === 'false') {
-        cy.contains(selectors.filterColor).click();
+        cy.contains(selectors.filterColor, { matchCase: false }).click();
       }
     });
   cy.get(selectors.selectColorRed).click();
