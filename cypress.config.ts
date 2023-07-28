@@ -2,7 +2,7 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'https://demoshops.splendid-internet.de/magento/demoshop-magento2-daily'
+    baseUrl: 'https://webvisum:w3bv1suM@m2.demo.webvisum.de/'
   },
   viewportWidth: 1200
 });

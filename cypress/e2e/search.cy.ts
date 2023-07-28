@@ -13,13 +13,12 @@ describe('Search function tests', () => {
 
   it('Can find a single product', () => {
     cy.get(selectors.searchField).type('Didi{enter}');
-    cy.get(selectors.foundItems).should('have.length', 1);
-    cy.get(selectors.itemTitles).should('include.text', 'Didi');
+    cy.contains(selectors.foundOneItemText, { matchCase: false });
   });
 
   it('Can perform a search with no result', () => {
     cy.get(selectors.searchField).type('ABC123{enter}');
-    cy.contains('Ihre Suche ergab keine Ergebnisse').should('be.visible');
+    cy.contains(selectors.foundNoItemsText, { matchCase: false }).should('be.visible');
   });
 
   it('Can see suggestions in searchbar', () => {
