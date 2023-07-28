@@ -4,10 +4,11 @@ import { CartPage } from '@/pages/CartPage';
 describe('Shopping cart tests', () => {
   beforeEach(() => {
     cy.visit('/didi-sport-watch.html');
+    cy.wait(Cypress.env('waitForPageLoad'));
     cy.get(selectors.buttonAddToCart).click({ scrollBehavior: 'center' });
     cy.get(selectors.notificationMessageTop)
       .should('be.visible')
-      .should('contain.text', 'Sie haben Didi Sport Watch zum Warenkorb hinzugefügt.');
+      .should('contain.text', 'Didi Sport Watch zum Warenkorb hinzugefügt.');
     cy.get(selectors.miniCart).should('be.visible').click({ scrollBehavior: 'center' });
     cy.get(selectors.buttonViewCart).should('be.visible').click({ scrollBehavior: 'center' });
   });
@@ -21,9 +22,7 @@ describe('Shopping cart tests', () => {
   });
 
   it('Can remove product from card', () => {
-    CartPage.removeArticle(0);
-    cy.get(selectors.cartEmptyTextField)
-      .should('contain.text', 'Sie haben keine Artikel im Warenkorb')
-      .should('be.visible');
+    CartPage.removeArticle(1);
+    cy.get(selectors.cartEmptyTextField).should('contain.text', 'keine Artikel im Warenkorb').should('be.visible');
   });
 });

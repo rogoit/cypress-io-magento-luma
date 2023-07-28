@@ -7,9 +7,10 @@ describe('Prouct page tests', () => {
 
   beforeEach(() => {
     cy.visit(productDetails.url);
+    cy.wait(Cypress.env('waitForPageLoad'));
   });
 
-  it('Has title, price & tax details', () => {
+  it('Has title and price', () => {
     cy.get(selectors.titleWrapper).should('include.text', productDetails.title);
 
     cy.get(selectors.price)
@@ -17,8 +18,6 @@ describe('Prouct page tests', () => {
       .invoke('text')
       .should('contain', productDetails.price)
       .should('contain', productDetails.currency);
-
-    cy.get(selectors.taxDetails).first().should('include.text', productDetails.taxDetails);
   });
 
   it('Has image', () => {

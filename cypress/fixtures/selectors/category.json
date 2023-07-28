@@ -8,6 +8,7 @@
   "displayedProductsOnPageSelect" : "#limiter",
   "displayedArticlesAmount" : "#toolbar-amount",
   "displayedArticles" : "[class='item product product-item']",
-  "buttonListView": "[title='Liste']"
+  "buttonListView": "[title='Liste']",
+  "filterCollapsible": "[class='filter-options-title']"
 }
 

@@ -6,6 +6,7 @@ describe('Startpage tests', () => {
 
   beforeEach(() => {
     cy.visit('/');
+    cy.wait(Cypress.env('waitForPageLoad'));
   });
 
   it('Startpage valid and contains products', () => {
@@ -28,5 +29,10 @@ describe('Startpage tests', () => {
     cy.get(selectors.newsletterConfirmSuccess).should('be.visible');
     cy.get(selectors.newsletterRegistration).type('.invalidEmail. {enter}');
     cy.get(selectors.newsletterError).should('be.visible');
+  });
+
+  it('Cant register newsletter twice', () => {
+    cy.get(selectors.newsletterRegistration).should('be.visible').type('TESTIFY@mail.test {enter}');
+    cy.get(selectors.newsletterConfirmFail).should('be.visible');
   });
 });

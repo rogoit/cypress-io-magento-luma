@@ -6,6 +6,7 @@ describe('Category page tests', () => {
 
   beforeEach(() => {
     cy.visit('/women/tops-women.html');
+    cy.wait(Cypress.env('waitForPageLoad'));
   });
 
   it('Filters for color', () => {
@@ -34,7 +35,13 @@ describe('Category page tests', () => {
 });
 
 function setFilterColor() {
-  cy.contains(selectors.filterColor).click();
+  cy.get(selectors.filterCollapsible)
+    .contains('Farbe')
+    .then((filterColorCollapsibleColor) => {
+      if (filterColorCollapsibleColor.attr('aria-expanded') === 'false') {
+        cy.contains(selectors.filterColor).click();
+      }
+    });
   cy.get(selectors.selectColorRed).click();
 }
 

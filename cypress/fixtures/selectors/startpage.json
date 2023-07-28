@@ -5,7 +5,8 @@
   "registerButton": "Ein Konto erstellen",
   "newsletterRegistration": "#newsletter",
   "newsletterConfirmSuccess": "[data-ui-id='message-success']",
+  "newsletterConfirmFail": "[data-ui-id='message-error']",
   "newsletterError": "#newsletter-error",
-  "search": "#search",
+  "search": "#minisearch-form-top-search",
   "mainContent": "#maincontent"
 }
