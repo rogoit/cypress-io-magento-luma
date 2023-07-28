@@ -14,7 +14,7 @@ describe('Search function tests', () => {
 
   it('Can find a single product', () => {
     cy.get(selectors.searchField).type('Didi{enter}');
-    cy.contains(selectors.onlyOneProductFoundText, { matchCase : false }).should('be.visible');
+    cy.contains(selectors.onlyOneProductFoundText, { matchCase: false }).should('be.visible');
   });
 
   it('Can perform a search with no result', () => {
