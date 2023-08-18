@@ -35,6 +35,86 @@ Or if you want to use the GUI
 
 `$ npx cypress open` or `$ npm run cypress:open`
 
+## Test features
+
+#### Testify base tests
+
+  - Validates imprint is clickable
+  - Validates request to internal links returns status code 200
+  - Validates internal links are loading
+  - Validates no google servies are loaded
+  - Validates request to images returns status code 200
+  - Validates Page has only one h1 headline
+  - Validates request to invalid path returns status code 404
+
+## Commands
+
+#### Validate all internal links return status code 200
+
+```js
+cy.ttEveryInternalLinkStatusOk()
+```
+
+#### Validate all images return status code 200
+
+```js
+cy.ttValidateAllImagesResponseStatusOk()
+```
+
+#### Validate all internal links are loading
+
+```js
+cy.ttEveryInternalLinkIsLoading()
+```
+
+#### Return all internal links as array
+
+```js
+cy.ttGetInternalLinks()
+```
+
+#### Validate imprint is clickable
+
+```js
+cy.ttValidateImprintClickable()
+```
+
+#### Validate no google services are being loaded
+
+```js
+cy.ttValidateNoGoogleServices()
+```
+
+#### Run all TESTIFY base tests
+
+```js
+cy.ttRunTestifyBaseTests()
+```
+
+#### Check for accesibility issues
+
+```js
+cy.ttAccessibility()
+```
+
+#### Run all TESTIFY page content validation tests
+
+```js
+cy.ttValidatePageContent()
+```
+
+#### Validate page has only one headline
+
+```js
+cy.ttOnlyOneH1()
+```
+
+#### Validate invalid path returns 404 error
+
+```js
+cy.ttInvalidPath404()
+```
+
 ### Open Source project by TESTIFY.TEAM
 
 [TESTIFY.TEAM](https://testify.team) - WE FIND BUGS. **AUTOMATED**.
