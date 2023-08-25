@@ -1,0 +1,15 @@
+{
+  "itemList": "li[class='item product product-item']",
+  "addToCartButton": "[title='In den Warenkorb']",
+  "sorter": "#sorter",
+  "sorterDirectionSwitch": "[data-role='direction-switcher']",
+  "miniSearch": "#minisearch-input-top-search",
+  "pageTitleWrapper": "[data-ui-id='page-title-wrapper']",
+  "headerLinks": "[class='header links']",
+  "fieldEmail": "#email",
+  "fieldPassWrapper": "[class='field password required']",
+  "fieldPass": "#pass",
+  "limiter": "#limiter",
+  "productItemLink": "a.product-item-link",
+  "nextPageButton": "a[title='Weiter']"
+}
