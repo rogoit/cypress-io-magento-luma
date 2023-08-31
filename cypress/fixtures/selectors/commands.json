@@ -11,5 +11,15 @@
   "fieldPass": "#pass",
   "limiter": "#limiter",
   "productItemLink": "a.product-item-link",
-  "nextPageButton": "a[title='Weiter']"
+  "nextPageButton": "a[title='Weiter']",
+  "shoppingCartIcon": "[data-block='minicart']",
+  "buttonViewShoppingCart": "[class='action viewcart]'",
+  "shoppingcartEmptyText": "[class='subtitle empty']",
+  "removeShoppingCartItem": "[title='Artikel entfernen']",
+  "buttonConfirmRemoveFromCart": "[class='action-primary action-accept']",
+  "miniCartItemCount": "[class='counter-number']",
+  "miniCart": "[data-block='minicart']",
+  "buttonUpdateCart": "[class='update-cart-item']",
+  "itemCountInMiniCart": "[class='item-qty cart-item-qty']",
+  "minicartTotalPrice": ".subtotal *> .price"
 }

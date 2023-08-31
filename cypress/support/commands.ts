@@ -89,3 +89,64 @@ Cypress.Commands.add('paginationValidation', () => {
         });
     });
 });
+
+Cypress.Commands.add('navigateToShoppingCart', () => {
+  cy.log('TESTIFY navigate to shopping cart');
+  cy.get(selectors.shoppingCartIcon).should('be.visible').should('not.have.class', 'active').click();
+  cy.get(selectors.shoppingCartIcon).should('have.class', 'active');
+  cy.get('body').then((body) => {
+    if (body.find(selectors.shoppingcartEmptyText).length) {
+      cy.log('Shopping cart is empty.');
+    } else {
+      cy.get(selectors.buttonViewShoppingCart).should('be.visible').click();
+    }
+  });
+});
+
+Cypress.Commands.add('removeItemFromShoppingCart', (articleID) => {
+  // You need to navigate to shopping card before running this command
+  cy.log('TESTIFY remove item from shopping cart');
+  cy.get(selectors.removeShoppingCartItem).eq(articleID).should('be.visible').click();
+  cy.get(selectors.buttonConfirmRemoveFromCart).should('be.visible').click();
+});
+
+Cypress.Commands.add('getShoppingCartItemCount', () => {
+  // Use .then on the function to access value
+  cy.log('TESTIFY get shopping cart item count');
+  cy.get(selectors.miniCartItemCount)
+    .should('be.visible')
+    .invoke('text')
+    .then((shoppingCartItemCount) => {
+      return cy.wrap(shoppingCartItemCount.trim());
+    });
+});
+
+Cypress.Commands.add('increaseShoppingCartItemQuantity', (articleID) => {
+  // Pass the ID of the item you want to increase
+  // You don't need to be in shopping cart for this command to work
+  cy.log('TESTIFY increase item quantity in shopping cart');
+  cy.get(selectors.miniCart).should('be.visible').click();
+  cy.get(selectors.itemCountInMiniCart)
+    .eq(articleID)
+    .should('be.visible')
+    .invoke('attr', 'data-item-qty')
+    .then((articleQuantity) => {
+      const articleQuantityIncreased = Number(articleQuantity) + 1;
+      cy.get(selectors.itemCountInMiniCart).eq(articleID).clear().type(articleQuantityIncreased);
+      cy.get(selectors.buttonUpdateCart).eq(articleID).should('be.visible').click();
+    });
+  cy.get(selectors.miniCart).should('be.visible').click();
+});
+
+Cypress.Commands.add('getShoppingCartPrice', () => {
+  // Use .then on the function to access value
+  cy.log('TESTIFY get shopping cart price');
+  cy.get(selectors.miniCart).should('be.visible').click();
+  cy.get(selectors.minicartTotalPrice)
+    .should('be.visible')
+    .invoke('text')
+    .then((totalPrice) => {
+      return cy.wrap(totalPrice);
+    });
+  cy.get(selectors.miniCart).should('be.visible').click();
+});

@@ -7,5 +7,10 @@ declare namespace Cypress {
     doLogin(email: string, password: string): Chainable<JQuery<HTMLElement>>;
     setListLimitAndValidate(limit: string): Chainable<JQuery<HTMLElement>>;
     paginationValidation(): Chainable<JQuery<HTMLElement>>;
+    navigateToShoppingCart(): Chainable<JQuery<HTMLElement>>;
+    removeItemFromShoppingCart(articleID: number): Chainable<JQuery<HTMLElement>>;
+    getShoppingCartItemCount(): Chainable<JQuery<HTMLElement>>;
+    increaseShoppingCartItemQuantity(articleID: number): Chainable<JQuery<HTMLElement>>;
+    getShoppingCartPrice(): Chainable<JQuery<HTMLElement>>;
   }
 }

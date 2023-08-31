@@ -47,7 +47,7 @@ Or if you want to use the GUI
   - Validates Page has only one h1 headline
   - Validates request to invalid path returns status code 404
 
-## Commands
+## Testify Commands
 
 #### Validate all internal links return status code 200
 
@@ -113,6 +113,74 @@ cy.ttOnlyOneH1()
 
 ```js
 cy.ttInvalidPath404()
+```
+
+## Testify Cypress Commands
+
+#### Add first item on page to basket
+
+```js
+cy.addFirstItemToBasket()
+```
+
+#### Sort items by price
+
+```js
+cy.sortByPrice()
+```
+
+#### Switch direction in which items on page are sorted
+
+```js
+cy.switchSortingDirection()
+```
+
+#### Search for given argument and validate results are for the given argument
+
+```js
+cy.searchForWordAndValidate(searchword: string)
+```
+
+#### Login to Account with email and password
+
+```js
+cy.doLogin(email: string, password: string)
+```
+
+#### Set limit for amount of results on a single page
+
+```js
+cy.setListLimitAndValidate(limit: string)
+```
+
+#### Validate first result on first page differs to first result on second page
+
+```js
+cy.paginationValidation()
+```
+
+#### Navigate to shopping cart page
+
+```js
+cy.navigateToShoppingCart()
+```
+
+#### Remove product from shopping cart with given ID
+
+```js
+cy.removeItemFromShoppingCart(articleID: number)
+```
+
+#### Increase quantity of product with given ID by one
+
+```js
+cy.increaseShoppingCartItemQuantity(articleID: number)
+```
+
+#### Get total price of shopping cart
+
+```js
+cy.getShoppingCartPrice();
 ```
 
 ### Open Source project by TESTIFY.TEAM
