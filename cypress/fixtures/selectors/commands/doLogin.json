@@ -1,0 +1,6 @@
+{
+  "headerLinks": "[class='header links']",
+  "fieldEmail": "#email",
+  "fieldPassWrapper": "[class='field password required']",
+  "fieldPass": "#pass"
+}

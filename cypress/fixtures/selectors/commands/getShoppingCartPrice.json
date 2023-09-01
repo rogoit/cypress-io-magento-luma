@@ -1,0 +1,4 @@
+{
+  "miniCart": "[data-block='minicart']",
+  "minicartTotalPrice": ".subtotal *> .price"
+}

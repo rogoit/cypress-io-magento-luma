@@ -1,0 +1,5 @@
+{
+  "shoppingCartIcon": "[data-block='minicart']",
+  "buttonViewShoppingCart": "[class='action viewcart']",
+  "shoppingcartEmptyText": "[class='subtitle empty']"
+}

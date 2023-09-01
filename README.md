@@ -1,4 +1,4 @@
-# Testing for magento
+# Testing for Magento
 
 ![Magento_Logo](https://user-images.githubusercontent.com/108877931/214883559-6ff3d5a2-af1d-4f66-9eb2-4595e1c5a64c.png)
 

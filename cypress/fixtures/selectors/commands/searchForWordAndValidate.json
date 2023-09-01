@@ -1,0 +1,4 @@
+{
+  "miniSearch": "#minisearch-input-top-search",
+  "pageTitleWrapper": "[data-ui-id='page-title-wrapper']"
+}

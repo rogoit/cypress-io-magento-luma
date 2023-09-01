@@ -1,0 +1,5 @@
+{
+  "miniCart": "[data-block='minicart']",
+  "buttonUpdateCart": "[class='update-cart-item']",
+  "itemCountInMiniCart": "[class='item-qty cart-item-qty']"
+}

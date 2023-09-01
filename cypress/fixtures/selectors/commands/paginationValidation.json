@@ -1,0 +1,5 @@
+{
+  "itemList": "li[class='item product product-item']",
+  "productItemLink": "a.product-item-link",
+  "nextPageButton": "a[title='Weiter']"
+}
