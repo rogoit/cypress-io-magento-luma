@@ -47,7 +47,7 @@ Or if you want to use the GUI
   - Validates Page has only one h1 headline
   - Validates request to invalid path returns status code 404
 
-## Testify Commands
+## TESTIFY Commands
 
 #### Validate all internal links return status code 200
 
@@ -115,7 +115,7 @@ cy.ttOnlyOneH1()
 cy.ttInvalidPath404()
 ```
 
-## Testify Cypress Commands
+## TESTIFY Cypress Commands
 
 #### Add first item on page to basket
 
