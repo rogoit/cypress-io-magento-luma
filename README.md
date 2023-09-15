@@ -8,9 +8,13 @@ This project is inspired by elgentos/magento2-cypress-testing-suite: https://git
 
 ## Installation
 
-Clone repository.
+Initialize a new repo
 
-`$ git clone git@github.com:ncatestify/cypress-io-magento-luma.git`
+```bash
+$ npm init with ncatestify/cypress-io-magento-luma 
+```
+
+Fill name and description.
 
 Navigate into project folder and install dependencies.
 

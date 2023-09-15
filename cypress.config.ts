@@ -1,11 +1,9 @@
-import { defineConfig } from 'cypress';
+import { defineConfig } from "cypress";
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'https://m2.demo.wilma.dev'
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
   },
-  env: {
-    waitForPageLoad: 3000
-  },
-  viewportWidth: 1200
 });

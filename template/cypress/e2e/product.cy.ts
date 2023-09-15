@@ -1,4 +1,4 @@
-import { ProductPage } from '@/pages/ProductPage';
+import { ProductPage } from 'template/cypress/pages/ProductPage';
 import selectors from '../fixtures/selectors/product.json';
 import productDetails from '../fixtures/productDetails.json';
 

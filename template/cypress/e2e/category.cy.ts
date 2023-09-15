@@ -1,4 +1,4 @@
-import { CategoryPage } from '@/pages/CategoryPage';
+import { CategoryPage } from 'template/cypress/pages/CategoryPage';
 import selectors from '../fixtures/selectors/category.json';
 
 describe('Category page tests', () => {
