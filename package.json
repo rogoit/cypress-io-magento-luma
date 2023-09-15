@@ -1,6 +1,6 @@
 {
   "name": "cypressio-magento-luma",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "Website testing",
   "main": "index.js",
   "engines": {
