@@ -1,0 +1,4 @@
+{
+  "itemList": "li[class='item product product-item']",
+  "limiter": "#limiter"
+}

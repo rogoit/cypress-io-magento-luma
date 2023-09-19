@@ -1,0 +1,10 @@
+{
+  "prompts": {
+    "description": {
+      "type": "input",
+      "required": true,
+      "message": "Project Description"
+    }
+  },
+  "completeMessage": "To get started:\n  cd {{projectName}}\n  npm install\n  change baseUrl in cypress.config.ts\n  update selectors if necessary\n  npx cypress open"
+}

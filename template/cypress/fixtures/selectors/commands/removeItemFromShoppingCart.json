@@ -1,0 +1,4 @@
+{
+  "removeShoppingCartItem": "[title='Artikel entfernen']",
+  "buttonConfirmRemoveFromCart": "[class='action-primary action-accept']"
+}

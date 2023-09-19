@@ -3,8 +3,8 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@/support/*": ["./cypress/support/*"],
-      "@/pages/*": ["./cypress/pages/*"]
+      "@/support/*": ["template/cypress/support/*"],
+      "@/pages/*": ["template/cypress/pages/*"]
     },
     "module": "amd",
     "esModuleInterop": true,

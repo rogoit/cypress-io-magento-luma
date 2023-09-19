@@ -1,4 +1,4 @@
-# Testing for magento
+# Testing for Magento
 
 ![Magento_Logo](https://user-images.githubusercontent.com/108877931/214883559-6ff3d5a2-af1d-4f66-9eb2-4595e1c5a64c.png)
 
@@ -8,9 +8,13 @@ This project is inspired by elgentos/magento2-cypress-testing-suite: https://git
 
 ## Installation
 
-Clone repository.
+Initialize a new repo
 
-`$ git clone git@github.com:ncatestify/cypress-io-magento-luma.git`
+```bash
+$ npm init with ncatestify/cypress-io-magento-luma 
+```
+
+Fill name and description.
 
 Navigate into project folder and install dependencies.
 
@@ -47,7 +51,7 @@ Or if you want to use the GUI
   - Validates Page has only one h1 headline
   - Validates request to invalid path returns status code 404
 
-## Commands
+## TESTIFY Commands
 
 #### Validate all internal links return status code 200
 
@@ -113,6 +117,74 @@ cy.ttOnlyOneH1()
 
 ```js
 cy.ttInvalidPath404()
+```
+
+## TESTIFY Cypress Commands
+
+#### Add first item on page to basket
+
+```js
+cy.addFirstItemToBasket()
+```
+
+#### Sort items by price
+
+```js
+cy.sortByPrice()
+```
+
+#### Switch direction in which items on page are sorted
+
+```js
+cy.switchSortingDirection()
+```
+
+#### Search for given argument and validate results are for the given argument
+
+```js
+cy.searchForWordAndValidate(searchword: string)
+```
+
+#### Login to Account with email and password
+
+```js
+cy.doLogin(email: string, password: string)
+```
+
+#### Set limit for amount of results on a single page
+
+```js
+cy.setListLimitAndValidate(limit: string)
+```
+
+#### Validate first result on first page differs to first result on second page
+
+```js
+cy.paginationValidation()
+```
+
+#### Navigate to shopping cart page
+
+```js
+cy.navigateToShoppingCart()
+```
+
+#### Remove product from shopping cart with given ID
+
+```js
+cy.removeItemFromShoppingCart(articleID: number)
+```
+
+#### Increase quantity of product with given ID by one
+
+```js
+cy.increaseShoppingCartItemQuantity(articleID: number)
+```
+
+#### Get total price of shopping cart
+
+```js
+cy.getShoppingCartPrice();
 ```
 
 ### Open Source project by TESTIFY.TEAM

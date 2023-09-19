@@ -1,7 +1,7 @@
 {
-  "name": "cypressio-magento-luma",
+  "name": "{{projectName}}",
   "version": "1.0.0",
-  "description": "Website testing",
+  "description": "{{description}}",
   "main": "index.js",
   "engines": {
     "node": ">=16.0.0"
@@ -36,4 +36,3 @@
     "cypress-ncatestify-plugin": "^2.0.8"
   }
 }
-
