@@ -1,5 +1,5 @@
 import selectors from '../fixtures/selectors/cart.json';
-import { CartPage } from 'template/cypress/pages/CartPage';
+import { CartPage } from '../pages/CartPage';
 
 describe('Shopping cart tests', () => {
   beforeEach(() => {
