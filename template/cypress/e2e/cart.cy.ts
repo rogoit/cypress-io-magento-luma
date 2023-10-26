@@ -17,11 +17,11 @@ describe('Shopping cart tests', () => {
     cy.get(selectors.itemAmountInCart).should('be.visible').should('have.attr', 'value').should('eq', '1');
   });
 
-  it('Can change quantity in card', () => {
-    cy.get(selectors.inputAmountInCard).should('be.visible').clear().type('2{enter}').should('have.value', '2');
+  it('Can change quantity in cart', () => {
+    cy.get(selectors.inputAmountInCart).should('be.visible').clear().type('2{enter}').should('have.value', '2');
   });
 
-  it('Can remove product from card', () => {
+  it('Can remove product from cart', () => {
     CartPage.removeArticle(1);
     cy.get(selectors.cartEmptyTextField).should('contain.text', 'keine Artikel im Warenkorb').should('be.visible');
   });
